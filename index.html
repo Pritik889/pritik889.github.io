@@ -17,8 +17,19 @@
   margin-right: 15px;
   color: white;
   font-weight: bold;
-  float: right;
+  float: left;
   font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button {
+  background-color: #4CAF50;
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 10px;
   line-height: 20px;
   cursor: pointer;
   transition: 0.3s;
@@ -36,6 +47,7 @@
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
   <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+   <input type="button" class="button" value="View"> 
 </div>
     <h1>Hello World</h1>
     <p id="message"></p>
