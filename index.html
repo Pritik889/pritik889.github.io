@@ -43,6 +43,10 @@
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
   <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
   </div>
+  <div id="alertAppleId" class="alert" style="display: none ;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Download our free app from the Apple Store for a mobile friendly experience.
+  </div>
     <title>Document</title>
 </head>
 
@@ -51,19 +55,17 @@
     <h1>Hello World</h1>
     <p id="message"></p>
 <script>
-function getDeviceType = () => {
+function getDeviceType() {
   const ua = navigator.userAgent;
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-   
+    document.getElementById("alertAppleId").style.display = "block";
   }
   if (
-    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-      ua
-    )
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
   ) {
+  console.log('mobile');
     document.getElementById("alertId").style.display = "block";
   }
-  return "desktop";
 };
 getDeviceType();
 </script>	
