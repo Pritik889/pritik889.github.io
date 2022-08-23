@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MMM" content="app-id=492208933">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p id="message"></p>
+</body>
+<script>
+    //Disable right click from website
+    //document.addEventListener('contextmenu', event => event.preventDefault());
+    var firstName = 'Priti';
+    var lastName = 'Kumari';
+
+    var message = 'My Name' + firstName + ' ' + lastName;
+    var messageinertpol = `My Name is ${firstName} ${lastName}`;
+    document.getElementById("message").innerHTML = messageinertpol;
+
+    var arrayCollectionOfLaptop = ['Lenovo', 'HP', 'Dell'];
+    var newArray = new Array('Lenovo', 'HP', 'Dell');
+    for (var i = 0; i < arrayCollectionOfLaptop.length; i++) {
+        console.log(arrayCollectionOfLaptop[i]);
+    }
+</script>
+
+</html>
