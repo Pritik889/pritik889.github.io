@@ -107,7 +107,13 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         console.log("iOS");
 		 //document.getElementById("alertAppleId").style.display = "block";
-	 document.getElementById("flashMessageIosId").style.display = "block";
+	 //document.getElementById("flashMessageIosId").style.display = "block";
+	 var headNode = document.getElementsByTagName("head")[0];
+  var sbNode = document.createElement('meta');
+  sbNode.name = 'apple-itunes-app';
+  sbNode.content = 'app-id=492208933';
+  document.getElementsByTagName('head')[0].appendChild(sbNode);
+	 
 	
     }
 
