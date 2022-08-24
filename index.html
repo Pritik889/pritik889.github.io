@@ -32,7 +32,7 @@
 </style>
 <div id="flashMessageAndroidId" class="alert" style="display: none ;">
   <span  class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
-  Download our free app from the Google Store for a mobile friendly experience
+  <a href="https://play.google.com/store/search?q=dataaxle&c=apps">Download our free app from the Google Store for a mobile friendly experience</a>
   </div>
   <div id="flashMessageIosId" class="alert" style="display: none ;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -100,6 +100,7 @@ function getMobileOperatingSystem() {
         console.log("Android");
      //document.getElementById("alertAppleId").style.display = "none";
 	 document.getElementById("flashMessageAndroidId").style.display = "block";
+	 //https://play.google.com/store/search?q=dataaxle&c=apps
 	
     }
 
@@ -107,13 +108,8 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         console.log("iOS");
 		 //document.getElementById("alertAppleId").style.display = "block";
-	 //document.getElementById("flashMessageIosId").style.display = "block";
-	 var headNode = document.getElementsByTagName("head")[0];
-  var sbNode = document.createElement('meta');
-  sbNode.name = 'apple-itunes-app';
-  sbNode.content = 'app-id=492208933';
-  document.getElementsByTagName('head')[0].appendChild(sbNode);
-	 
+	 document.getElementById("flashMessageIosId").style.display = "block";
+	
 	
     }
 
